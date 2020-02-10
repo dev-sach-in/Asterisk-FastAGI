@@ -133,3 +133,20 @@ exten => _X.,1,AGI(agi://127.0.0.1/test-agi.php)
 exten => _X.,n,NoOp(${test})
 exten => _X.,n,hangup()
 ```
+
+## Remove debug log from command line
+Set `debug` and `error_handler` to false in `/etc/asterisk/phpagi.conf`
+`vi /etc/asterisk/phpagi.conf`
+```shell
+[phpagi]
+debug=false                              ; enable debuging
+error_handler=false                      ; use internal error handler
+```
+After this, set verbose to `false` in `/var/lib/asterisk/agi-bin/phpagi-fastagi.php`
+`vi /var/lib/asterisk/agi-bin/phpagi-fastagi.php`
+```shell
+#replace
+$fastagi->verbose(print_r($fastagi, true)); #or comment it
+#with
+$fastagi->verbose(print_r($fastagi, false));
+```
