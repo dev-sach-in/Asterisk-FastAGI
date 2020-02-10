@@ -136,14 +136,18 @@ exten => _X.,n,hangup()
 
 ## Remove debug log from command line
 Set `debug` and `error_handler` to false in `/etc/asterisk/phpagi.conf`
-`vi /etc/asterisk/phpagi.conf`
+```shell
+vi /etc/asterisk/phpagi.conf`
+```
 ```shell
 [phpagi]
 debug=false                              ; enable debuging
 error_handler=false                      ; use internal error handler
 ```
 After this, set verbose to `false` in `/var/lib/asterisk/agi-bin/phpagi-fastagi.php`
-`vi /var/lib/asterisk/agi-bin/phpagi-fastagi.php`
+```shell
+vi /var/lib/asterisk/agi-bin/phpagi-fastagi.php`
+```
 ```shell
 #replace
 $fastagi->verbose(print_r($fastagi, true)); #or comment it
