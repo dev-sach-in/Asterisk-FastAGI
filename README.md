@@ -15,6 +15,7 @@ yum install xinetd
 yum install ngrep
 yum install php-posix
 yum install php-process
+yum install net-tools
 ```
 ## Configuring xinetd for FastAGI and PHPAGI
 ##### Configuring xinetd
