@@ -49,7 +49,7 @@ Once we have configured our xinetd server, we need to notify your Linux server o
 vi /etc/services
 ```
 
-Paste the following at the end of `/etc/services`
+Paste the following at the end of `/etc/services` (Esc key and then press Shift + G to move cursor to end of file in vi or vim text editor under Linux and Unix-like systems.)
 ```shell
 fastagi         4573/tcp                # Asterisk AGI
 ```
