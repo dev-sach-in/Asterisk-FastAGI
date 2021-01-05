@@ -118,7 +118,10 @@ vi /var/lib/asterisk/agi-bin/test-agi.php
 
 ```php
 <?php
+	$request = $fastagi->request;
+	
 	$fastagi->verbose('cool, the FastAGI server has been called!');
+	$fastagi->verbose(print_r($request, TRUE));
 	$fastagi->set_variable("test", "1111");
 ?>
 ```
