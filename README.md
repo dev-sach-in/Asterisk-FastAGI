@@ -61,7 +61,7 @@ Once you have finished your configuration, you may run the following command:
 
 If everything has been performed correctly, using the following command should emit an output, search for following:
 ```shell
-netstat -ap | less
+netstat -ap | grep xinetd
 ```
 ```shell
 tcp        0      0 localhost:fastagi       0.0.0.0:*               LISTEN      53871/xinetd
@@ -70,7 +70,7 @@ tcp        0      0 localhost:fastagi       0.0.0.0:*               LISTEN      
 Or
 
 ```shell
-netstat -apn | less
+netstat -apn | grep xinetd
 ```
 ```shell
 tcp        0      0 127.0.0.1:4573          0.0.0.0:*               LISTEN      53871/xinetd
